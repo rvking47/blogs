@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .blog-header {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .post-list {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <div class="blog-header">
+        <h1 style="text-decoration: underline;">blog website</h1>
+    </div>
+
+    <div class="post-list">
+        <div class="row">
+            <% blogshow.forEach((item, index) => { %>
+                <div class="col-md-6 mb-4">
+                    <div style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 30px; background-color: #fff;">
+                        <ul class="list-unstyled">
+                            <li style="font-size: 1.5rem;">
+                                <span style="font-weight: 600;">Title</span> : <%= item.title %>
+                            </li>
+                            <li>
+                                <span style="font-weight: 600;">Content</span> : <%= item.content %>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+</body>
+</html>
